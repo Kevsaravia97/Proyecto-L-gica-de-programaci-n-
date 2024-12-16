@@ -74,7 +74,7 @@ def mover_serpiente(serpiente, direccion):
     elif direccion == "d":  # Derecha
         nueva_cabeza = (cabeza[0], cabeza[1] + 1)
     serpiente.insert(0, nueva_cabeza)  # Agregar nueva cabeza
-    serpiente.pop()  # Remover la cola
+    return serpiente # Remover la cola
 
 # Función para verificar colisiones
 def verificar_colision(serpiente):
@@ -99,4 +99,27 @@ serpiente = [(5, 5), (5, 4), (5, 3)]
 # Inicialización del juego
 cuadricula = crear_cuadricula()
 dibujar_serpiente(cuadricula, serpiente)
-mostrar_cuadricula(cuadricula)  # ¡Se pasa la cuadrícula aquí!
+mostrar_cuadricula(cuadricula)  
+
+# Bucle principal del juego
+while True:
+    dibujar_serpiente(cuadricula, serpiente)
+    mostrar_cuadricula(cuadricula)
+    
+    # Obtener entrada del jugador
+    direccion = input("Ingresa una dirección (w=arriba, s=abajo, a=izquierda, d=derecha): ").strip()
+    
+    # Mover la serpiente
+    serpiente = mover_serpiente(serpiente, direccion)
+    
+    # Verificar colisiones
+    if verificar_colision(serpiente):
+        print("¡Colisión! El juego ha terminado.")
+        break
+    
+    # Comprobar si la serpiente ha comido la comida
+    if serpiente[0] == comida:
+        serpiente.append(serpiente[-1])  # Agregar un segmento al final de la serpiente
+        comida = generar_comida(cuadricula, serpiente)  # Generar nueva comida
+
+    time.sleep(0.2)  # Control de velocidad del juego

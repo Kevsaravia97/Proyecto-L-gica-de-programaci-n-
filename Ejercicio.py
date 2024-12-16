@@ -213,5 +213,62 @@ for i in range(1, 101):
     suma += i
 print("La suma de los números del 1 al 100 es:", suma)"""
 
-for i in range(20) :
-    print(i)
+"""for i in range(20) :
+    print(i)"""
+
+"""mi_tupla = (1, 2, 3, "a", "b", "c")
+print(mi_tupla)"""
+
+"""tupla = (1, 2, 3, "a", "b", "c")
+a = tupla[2:4]
+print(a)"""
+
+lista = ["Róman", 25, "Juan", 30, "Esteban", 40]
+"""print(lista)"""
+
+"""lista.append("soy")
+print(lista)"""
+
+"""listaB = ["almuerzo", 2, "merienda", 5, "dormir", 8]
+lista += listaB
+print(lista)"""
+
+"""lista.insert(25, "dolores")
+print(lista)"""
+
+"""lista.remove(25)
+print(lista)"""
+
+"""mi_lista = ["Mundo", "Cien", "Raíz", "Comer", "Ratón"]
+mi_lista.pop(3)
+print(mi_lista)"""
+
+"""listaA = ["lunes", "martes", "miércoles", "jueves", "viernes"]
+listaA.remove("miércoles")
+print(listaA)
+print(listaA[2])"""
+
+"""mi_lista = [75, 95, 7, 81, 64, 30, 6, 17, 37, 27]
+lista.sort ()
+print(mi_lista)"""
+
+"""datos = {"nombre" : "Isaac", "apellido" : "Placencia", "calificación" : "1", "semestre" : "tercero"}
+datos["calificación"] = "12"
+print(datos)"""
+
+"""def saludar():
+    print("Hola")
+saludar()"""
+
+"""def multiplicar(numUno, numDos):
+    resultado = numUno *numDos
+    return resultado
+
+print(multiplicar(8,3))"""
+
+def calcularIMC(peso, altura):
+    resultado = peso *altura
+    return resultado
+
+print(calcularIMC(85 *1,67))
+
